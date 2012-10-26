@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>URL Shortener</title>
+	</head>
+	<body>
+		<form name="form" action="/" method="POST">
+			<input type="text" name="url" />
+			<input type="submit" value="Shorten URL" />
+		</form>
+		<% if defined?@shorter %>
+			<p>Shorter url: <a href="<%= @shorter %>"><%= @shorter %></a></p>
+		<% end %>
+		<% if defined?@stats %>
+			<a href="<%= @stats %>">Statistics</a></p>
+		<% end %>
+		<% if defined?@messages %>
+			<ul>
+				<% for @msg in @messages %>
+					<li><%= @msg %></li>
+				<% end %>
+			</ul>
+		<% end %>
+	</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>URL Shortener</title>
+	</head>
+	<body>
+		<h1>Statistics</h1>
+		<h2>Views</h2>
+		<p><%= @views %> views</p>
+		<% if @browsers.any? %>
+			<h2>Browsers</h2>
+			<ul>
+				<% for @browser in @browsers %>
+					<li><%= @browser[0] %>: <%= @browser[1] %> views</li>
+				<% end %>
+			</ul>
+		<% end %>
+
+	</body>
+</html>
