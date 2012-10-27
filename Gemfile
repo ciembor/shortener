@@ -7,7 +7,7 @@ gem 'dm-sqlite-adapter'
 gem 'browser'
 
 group :test do
-  gem 'rspec'
-  gem 'rack-test'
-  gem 'rake'
+	gem 'rspec'
+	gem 'rack-test'
+	gem 'rake'
 end
