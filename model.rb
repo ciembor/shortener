@@ -1,10 +1,11 @@
 require 'data_mapper'
+require 'dm-validations'
 
 class Address
 	include DataMapper::Resource
 	
 	property :id, Serial
-	property :url, String, :required => true, :format => /https?:\/\/[\S]+/, :message => 'URL is not valid!'
+	property :url, String, :required => true, :length => 2048, :format => :url, :message => 'URL is not valid!'
 
 	has n, :logs
 	
